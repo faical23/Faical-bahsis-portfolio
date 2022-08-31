@@ -27,16 +27,11 @@ const Services = () => {
 
           <Col lg="6" md="6" className={`${classes.service__title}`}>
             <SectionSubtitle subtitle="What I do" />
-            <h3 className="mb-1 mt-4">Better Design.</h3>
             <h3 className="mb-1">Better Experience.</h3>
+            <h3 className="mb-1">Problem solving.</h3>
             <h3 className="mb-1">Better Design.</h3>
-            <h3 className="mb-4">Better Experience.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non amet
-              culpa nobis corporis officiis, numquam cupiditate, enim expedita
-              eveniet dolorum, aliquid nesciunt sapiente illo voluptatum!
-              Dolores fuga mollitia atque, placeat minima quibusdam accusantium!
-              Veniam, non distinctio dolorem rerum laboriosam deleniti.
+            <p className="my-4">
+            I have a passion for building cool software solutions and that's why I am in the field of Enterprise Software development. I am a strong believer in the fact that everyone should enjoy the work they do! That is why I love software development because I can contribute to making people's work easier, faster and better and hopefully, put a smile on their faces 
             </p>
           </Col>
         </Row>

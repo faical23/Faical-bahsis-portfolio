@@ -14,9 +14,9 @@ const Contact = () => {
             <SectionSubtitle subtitle="Contact me" />
             <h3 className="mt-4 mb-4">Contact with me</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              beatae ratione iusto cum. Doloremque suscipit eius provident error
-              labore est reprehenderit, exercitationem corrupti earum deleniti!
+
+            If you have any project or any opportunity or want to hire me, my inbox is always open. Whether you have a question or just want to say hello, I'll do my best to answer you!
+
             </p>
 
             <ul className={`${classes.contact__info__list}`}>
@@ -41,15 +41,9 @@ const Contact = () => {
             </ul>
 
             <div className={`${classes.social__links}`}>
-              <Link href="https://twitter.com/FBahsis">
-                  <i className="ri-twitter-line"></i>
-              </Link>
-              <Link href="https://github.com/faical23">
-                <i className="ri-github-line"></i>
-              </Link>
-              <Link href="https://www.linkedin.com/in/faical-bahsis-7818a1182/">
-                <i className="ri-linkedin-line"></i>
-              </Link>
+              <a style={{textDecoration: 'none',color: '#01d293'}} href="https://twitter.com/FBahsis" target="_blank" rel="noreferrer"><i className="ri-twitter-line"></i></a>
+              <a style={{textDecoration: 'none',color: '#01d293'}}  href="https://github.com/faical23" target="_blank" rel="noreferrer"><i className="ri-github-line"></i></a>
+              <a style={{textDecoration: 'none',color: '#01d293'}}  href="https://www.linkedin.com/in/faical-bahsis-7818a1182/" target="_blank" rel="noreferrer"><i className="ri-linkedin-line"></i></a>
             </div>
           </Col>
 

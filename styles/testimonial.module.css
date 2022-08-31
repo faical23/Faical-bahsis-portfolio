@@ -8,6 +8,10 @@
   margin-bottom: 30px;
 }
 
+.TragetBlank {
+  text-decoration:none;
+}
+
 .testimonial__client h6 {
   font-weight: 400;
 }

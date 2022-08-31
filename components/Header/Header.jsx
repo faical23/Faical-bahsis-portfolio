@@ -3,6 +3,13 @@ import React, { useRef, useEffect,useState } from "react";
 import { Container } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
+import Frensh from "../../public/images/Frensh.png";
+import England from "../../public/images/england.png";
+import Image from "next/image";
+import ReactFlagsSelect from "react-flags-select";
+
+
+
 
 const NAV__LINK = [
   {
@@ -29,6 +36,7 @@ const NAV__LINK = [
 
 const Header = () => {
   const [NavItem,SetNavItem] = useState('Home')
+  const [Lang,SetLang] = useState('En')
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const headerFunc = () => {
@@ -49,6 +57,11 @@ const Header = () => {
   }, []);
 
   const toggleMenu = () =>menuRef.current.classList.toggle(`${classes.menu__active}`);
+
+
+    const [select, setSelect] = useState("SE");
+  const onSelect = (code) => setSelect(code);
+  console.log("SELECT", select);
 
   return (
     <header className={`${classes.header}`} ref={headerRef}>
@@ -78,13 +91,23 @@ const Header = () => {
                 </Link>
               ))}
 
-              <div className={`${classes.nav__right}`}>
-                <p className=" d-flex align-items-center gap-2 mb-0">
+              <div className={`${classes.nav__right}`} style={{display: "flex",alignItems: "center"}}>
+                <p className=" d-flex align-items-center gap-2 mb-0" style={{margin:"0px 22px 0px 10px"}}>
                   {" "}
                   <a className={classes.Tele} href="tel:+212619887328">
                     <i className="ri-phone-line"></i> +212619887328{" "}
                   </a>
                 </p>
+                <div onClick={()=>{
+                  Lang === "En" ? SetLang('Fr') : SetLang('En')
+                }} style={{position: "relative",top: "11px",cursor: "pointer"}}>
+                    {
+                      Lang === "Fr" ?
+                      <Image alt="hero-image" src={Frensh} width="30" height="30" objectFit="cover" />
+                      :
+                      <Image alt="hero-image" src={England} width="30" height="30" objectFit="cover" />
+                    }
+                </div>
               </div>
             </div>
           </div>

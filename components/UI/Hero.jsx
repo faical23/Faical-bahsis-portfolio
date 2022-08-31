@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import heroImg from "../../public/images/faical.jpg";
 import classes from "../../styles/hero.module.css";
-import fileDownload from 'js-file-download'
-import axios from 'axios'
+
 
 
 
@@ -27,14 +26,15 @@ const Hero = () => {
               <h2 className={`mt-3 mb-3 ${classes.TitleName}`} >Faical Bahsis.</h2>
               <h5 className={`mb-4 ${classes.SousTitleName}`} >I build things for the web.</h5>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non amet culpa nobis corporis officiis, numquam cupiditate, enim expedita eveniet dolorum, aliquid nesciunt sapiente illo voluptatum! Dolores fuga mollitia atque, placeat minima quibusdam accusantium! Veniam, non distinctio dolorem rerum laboriosam deleniti.
+              I'm a full stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible ,
+              and It's always been my pleasure to contribute my best efforts to make your ideas become real.
               </p>
               <div className="mt-5">
                 <button className="primary__btn"  onClick={()=>{handleClick()}}>
                   <Link href="mailto:faissalabr@gmail.com">Hire me</Link>
                 </button>
                 <button className="secondary__btn">
-                  <Link href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank" download>Download CV</Link>
+                    <a href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank">Download CV</a>
                 </button>
               </div>
             </div>

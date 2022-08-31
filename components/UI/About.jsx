@@ -18,12 +18,11 @@ const About = () => {
             <h3 className="mt-4">I&apos;m here</h3>
             <h3 className="mb-4">to help your next project or your company</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              neque asperiores temporibus quo saepe odio, esse labore libero
-              obcaecati quidem explicabo blanditiis deleniti ex vitae ratione
-              ullam fugiat dicta eum sint officiis porro illum quia. Error quam
-              cum excepturi beatae.
-            </p>
+            Hello! My name is Faical and I love creating things that live on the internet. My interest in web development
+             started in 2018 when I decided to try to learn programming languages ​​like (c/c#/python) 
+             and after that I chose to specialize as a web developer. I'm learning a 
+             lot about web development and I have a lot of projects. you can check it in my portfolio or my github
+            I am interested in web development and modern technologies and work on ambitious projects with positive people.            </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
 
             <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
@@ -98,33 +97,22 @@ const About = () => {
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  React native
-                </h6>
-                <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                  <span className={`${classes.about__icon}`}>
-                    <i className="ri-checkbox-circle-line"></i>
-                  </span>
                   Php
                 </h6>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  Rest api
+                  MongoDb
                 </h6>
 
-                {/* <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+                <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  Angular
-                </h6> */}
-                {/* <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                  <span className={`${classes.about__icon}`}>
-                    <i className="ri-checkbox-circle-line"></i>
-                  </span>
-                  Ghraph ql
-                </h6> */}
+                  MySql
+                </h6>
+
               </div>
               <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
@@ -143,7 +131,7 @@ const About = () => {
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  material ui
+                  Rest Api
                 </h6>
 
               </div>
@@ -156,7 +144,7 @@ const About = () => {
               </button>
 
               <button className="secondary__btn">
-                <Link href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank" download>Download CV</Link>
+                  <a href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank">Download CV</a>
               </button>
             </div>
           </Col>
