@@ -3,33 +3,39 @@ import React, { useRef, useEffect,useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import classes from "./footer.module.css";
 import Link from "next/link";
+import En from '../../Lang/en.json'
+import Fr from '../../Lang/fr.json'
+import { connect } from "react-redux";
 
-const NAV__LINK = [
-  {
-    path: "/",
-    display: "Home",
-  },
-  {
-    path: "#about",
-    display: "About",
-  },
-  {
-    path: "#services",
-    display: "Services",
-  },
-  {
-    path: "#portfolio",
-    display: "Portfolio",
-  },
-  {
-    path: "#contact",
-    display: "Contact",
-  },
-];
 
-const Footer = () => {
+
+
+const Footer = (props) => {
   const date = new Date();
   const year = date.getFullYear();
+
+  const NAV__LINK = [
+    {
+      path: "/",
+      display:  props.Lang.Lang == "En" ? En.header.home  : Fr.header.home,
+    },
+    {
+      path: "#about",
+      display:  props.Lang.Lang == "En" ? En.header.about   : Fr.header.about,
+    },
+    {
+      path: "#services",
+      display:  props.Lang.Lang == "En" ? En.header.services   : Fr.header.services,
+    },
+    {
+      path: "#portfolio",
+      display:  props.Lang.Lang == "En" ? En.header.portfolio   : Fr.header.portfolio,
+    },
+    {
+      path: "#contact",
+      display:  props.Lang.Lang == "En" ? En.header.contact   : Fr.header.contact,
+    },
+  ];
 
   return (
     <footer>
@@ -48,7 +54,7 @@ const Footer = () => {
 
           <Col lg="6" className={`${classes.footer__top}`}>
             <div className={`${classes.footer__creator}`}>
-              <h6>Created by Faical bahsis</h6>
+              <h6>{props.Lang.Lang == "En"  ? En.Footer.createdBy : Fr.Footer.createdBy}{" "} Faical bahsis</h6>
             </div>
           </Col>
 
@@ -56,7 +62,7 @@ const Footer = () => {
           <Col lg="12">
             <div className={`${classes.footer__copyright}`}>
               <p>
-                &copy; Copyright {year} - Developed by Faical bahsis. All right reserved.{" "}
+                {props.Lang.Lang == "En"  ? En.Footer.CopyRight : Fr.Footer.CopyRight}
               </p>
             </div>
           </Col>
@@ -66,4 +72,10 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+const GetState = (state) =>{
+  return {
+      Lang:state
+  }
+}
+
+export default connect(GetState)(Footer)

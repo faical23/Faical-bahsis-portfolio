@@ -1,0 +1,58 @@
+
+{
+    "header":{
+        "home":"Accueil",
+        "about":"À propos de moi",
+        "services":"Services",
+        "portfolio":"Portfolio",
+        "contact":"Contact"
+    },
+    "Hero":{
+        "smallTitle":"Salut, je m'appelle",
+        "bigTitle":"Je construis des choses pour le web",
+        "description":"Je suis un développeur full stack spécialisé dans la création (et parfois la conception) d'expériences numériques exceptionnelles. Actuellement, je me concentre sur la construction accessible, et j'ai toujours eu le plaisir de contribuer de mon mieux pour que vos idées deviennent réalité.",
+        "hireMe":"Engagez moi",
+        "downloadCv":"Télécharger CV",
+        "skills":"Compétences",
+        "experience":"Expérience",
+        "years":"Ans"
+    },
+    "WhaIdo":{
+        "smallTitle":"Ce que je fais",
+        "betterExperience":"Meilleure expérience",
+        "problemSolving":"Problem Solving",
+        "betterDesign":"Meilleure conception",
+        "description":"J'ai une passion pour la création de solutions logicielles intéressantes, c'est pourquoi je suis dans le domaine du développement de logiciels d'entreprise. Je crois fermement que tout le monde devrait aimer le travail qu'il fait ! C'est pourquoi j'aime le développement de logiciels parce que je peux aider à rendre le travail des gens plus facile, plus rapide et meilleur et, espérons-le, leur faire sourire."
+    },
+    "AboutMe":{
+        "smallTitle":"À propos de moi",
+        "titre1":"je suis là",
+        "titre2":"pour aider votre prochaine projet ou votre entreprise",
+        "description1":"Salut! Je m'appelle Faical et j'adore créer des choses qui vivent sur Internet. Mon intérêt pour le développement web a commencé en 2018 lorsque j'ai décidé d'essayer d'apprendre des langages de programmation comme (c/c#/python) et après cela j'ai choisi de me spécialiser en tant que développeur web. J'apprends beaucoup sur le développement web et j'ai beaucoup de projets. Vous pouvez le vérifier dans mes travaux ou dans mon github. Je suis intéressé par le développement web, les nouvelles technologies et travailler sur des projets ambitieux avec des personnes positives.",
+        "description2":"Voici quelques technologies avec lesquelles j'ai travaillé récemment :",
+        "myPortfolio":"Mon portfolio",
+        "downloadCv":"Télécharger CV"
+    },
+    "Myportfolio":{
+        "smallTitle":"Mon portfolio",
+        "Titre":"Certaines de mes œuvres distinguées"
+    },
+    "Testimonials":{
+        "smallTitle":"Témoignages",
+        "Titre":"Ce que dit mes clients",
+        "SousTitre":"Client Fiverr"
+    },
+    "Contact":{
+        "smallTitle":"Contactez moi",
+        "Titre":"Contactez-moi",
+        "description":"Si vous avez un projet ou une opportunité ou souhaitez m'engager, ma boîte de réception est toujours ouverte. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, je ferai de mon mieux pour vous répondre !",
+        "fieldName":"votre nom",
+        "fieldEmail":"Adresse e-mail",
+        "fieldMessage":"Message",
+        "send":"Envoyer"
+    },
+    "Footer":{
+        "createdBy":"Créé par",
+        "CopyRight":"© Copyright 2022 - Développé par Faical bahsis. Tous droits réservés."
+    }
+}

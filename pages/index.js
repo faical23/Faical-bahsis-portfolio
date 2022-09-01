@@ -8,13 +8,13 @@ import Contact from "../components/UI/Contact";
 
 export default function Home() {
   return (
-    <Fragment>
+    <>
       <Hero />
       <Services />
       <About />
       <Portfolio />
       <Testimonial />
       <Contact />
-    </Fragment>
+    </>
   );
 }

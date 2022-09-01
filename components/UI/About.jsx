@@ -3,28 +3,24 @@ import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
 import SectionSubtitle from "./SectionSubtitle";
 import Image from "next/image";
-
 import IconsProgrammation from "../../public/images/IconsProgrammation.png";
-
 import classes from "../../styles/about.module.css";
+import En from '../../Lang/en.json'
+import Fr from '../../Lang/fr.json'
+import { connect } from "react-redux";
 
-const About = () => {
+
+const About = (props) => {
   return (
     <section id="about">
       <Container>
         <Row>
           <Col lg="7" className={`${classes.about__content}`}>
-            <SectionSubtitle subtitle="About me" />
-            <h3 className="mt-4">I&apos;m here</h3>
-            <h3 className="mb-4">to help your next project or your company</h3>
-            <p>
-            Hello! My name is Faical and I love creating things that live on the internet. My interest in web development
-             started in 2018 when I decided to try to learn programming languages ​​like (c/c#/python) 
-             and after that I chose to specialize as a web developer. I'm learning a 
-             lot about web development and I have a lot of projects. you can check it in my portfolio or my github
-            I am interested in web development and modern technologies and work on ambitious projects with positive people.            </p>
-            <p>Here are a few technologies I’ve been working with recently:</p>
-
+            <SectionSubtitle subtitle={props.Lang.Lang == "En" ? En.AboutMe.smallTitle : Fr.AboutMe.smallTitle} />
+            <h3 className="mt-4">{props.Lang.Lang == "En" ? En.AboutMe.titre1 : Fr.AboutMe.titre1}</h3>
+            <h3 className="mb-4">{props.Lang.Lang == "En" ? En.AboutMe.titre2 : Fr.AboutMe.titre2}</h3>
+            <p>{props.Lang.Lang == "En" ? En.AboutMe.description1 : Fr.AboutMe.description1}</p>
+            <p>{props.Lang.Lang == "En" ? En.AboutMe.description2 : Fr.AboutMe.description2}</p>
             <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
               <div>
                 <h6 className=" d-flex align-items-start gap-2 mt-3 fw-normal">
@@ -140,11 +136,11 @@ const About = () => {
 
             <div className="mt-5">
               <button className="primary__btn">
-                <Link href="#portfolio">My Portfolio</Link>
+                <Link href="#portfolio">{props.Lang.Lang == "En" ? En.AboutMe.myPortfolio : Fr.AboutMe.myPortfolio}</Link>
               </button>
 
               <button className="secondary__btn">
-                  <a href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank">Download CV</a>
+                  <a href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank">{props.Lang.Lang == "En" ? En.AboutMe.downloadCv : Fr.AboutMe.downloadCv}</a>
               </button>
             </div>
           </Col>
@@ -162,4 +158,10 @@ const About = () => {
   );
 };
 
-export default About;
+const GetState = (state) =>{
+  return {
+      Lang:state
+  }
+}
+
+export default connect(GetState)(About)

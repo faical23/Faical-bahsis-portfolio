@@ -6,37 +6,21 @@ import Link from "next/link";
 import Frensh from "../../public/images/Frensh.png";
 import England from "../../public/images/england.png";
 import Image from "next/image";
-import ReactFlagsSelect from "react-flags-select";
+import En from '../../Lang/en.json'
+import Fr from '../../Lang/fr.json'
+import { connect } from "react-redux";
 
 
 
 
-const NAV__LINK = [
-  {
-    path: "/",
-    display: "Home",
-  },
-  {
-    path: "#about",
-    display: "About",
-  },
-  {
-    path: "#services",
-    display: "Services",
-  },
-  {
-    path: "#portfolio",
-    display: "Portfolio",
-  },
-  {
-    path: "#contact",
-    display: "Contact",
-  },
-];
 
-const Header = () => {
-  const [NavItem,SetNavItem] = useState('Home')
-  const [Lang,SetLang] = useState('En')
+
+
+const Header = (props) => {
+  const [NavItemEn,SetNavItemEn] = useState('Home')
+  const [NavItemFr,SetNavItemFr] = useState('Accueil')
+
+  const [Lang,SetLang] = useState(props.Lang.Lang)
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const headerFunc = () => {
@@ -49,6 +33,28 @@ const Header = () => {
       headerRef.current.classList.remove(`${classes.header__shrink}`);
     }
   };
+  const NAV__LINK = [
+    {
+      path: "/",
+      display:  props.Lang.Lang == "En" ? En.header.home  : Fr.header.home,
+    },
+    {
+      path: "#about",
+      display:  props.Lang.Lang == "En" ? En.header.about   : Fr.header.about,
+    },
+    {
+      path: "#services",
+      display:  props.Lang.Lang == "En" ? En.header.services   : Fr.header.services,
+    },
+    {
+      path: "#portfolio",
+      display:  props.Lang.Lang == "En" ? En.header.portfolio   : Fr.header.portfolio,
+    },
+    {
+      path: "#contact",
+      display:  props.Lang.Lang == "En" ? En.header.contact   : Fr.header.contact,
+    },
+  ];
 
   useEffect(() => {
     window.addEventListener("scroll", headerFunc);
@@ -57,11 +63,6 @@ const Header = () => {
   }, []);
 
   const toggleMenu = () =>menuRef.current.classList.toggle(`${classes.menu__active}`);
-
-
-    const [select, setSelect] = useState("SE");
-  const onSelect = (code) => setSelect(code);
-  console.log("SELECT", select);
 
   return (
     <header className={`${classes.header}`} ref={headerRef}>
@@ -84,10 +85,10 @@ const Header = () => {
               {NAV__LINK.map((item, index) => (
                 <Link href={item.path} key={index}>
                   <p onClick={()=>{
-                      SetNavItem(item.display);
-                      console.log(item.display)
+                      SetNavItemEn(item.display);
+                      SetNavItemFr(item.display)
                     }}
-                   className={`${classes.Link}  ${NavItem === item.display ? classes.ActiveLink : "qqq"}`}> {item.display}</p>
+                   className={`${classes.Link}  ${(NavItemEn === item.display || NavItemFr === item.display) ? classes.ActiveLink : "qqq"}`}> {item.display}</p>
                 </Link>
               ))}
 
@@ -99,7 +100,7 @@ const Header = () => {
                   </a>
                 </p>
                 <div onClick={()=>{
-                  Lang === "En" ? SetLang('Fr') : SetLang('En')
+                  props.Lang.Lang === "En" ? props.ChangeLang('Fr') : props.ChangeLang('En')
                 }} style={{position: "relative",top: "11px",cursor: "pointer"}}>
                     {
                       Lang === "Fr" ?
@@ -121,4 +122,16 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    ChangeLang: (Lang) => dispatch({ type: 'SET_LANG',payload: Lang}),
+  }
+}
+
+const GetState = (state) =>{
+  return {
+      Lang:state
+  }
+}
+
+export default connect(GetState,mapDispatchToProps)(Header)

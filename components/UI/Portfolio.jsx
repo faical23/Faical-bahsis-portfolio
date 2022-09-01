@@ -3,10 +3,13 @@ import { Container, Row, Col } from "reactstrap";
 import SectionSubtitle from "./SectionSubtitle";
 import classes from "../../styles/portfolio.module.css";
 import PortfolioItem from "./PortfolioItem";
-
 import portfolioData from "../data/portfolio";
+import En from '../../Lang/en.json'
+import Fr from '../../Lang/fr.json'
+import { connect } from "react-redux";
 
-const Portfolio = () => {
+
+const Portfolio = (props) => {
   const [filter, setFilter] = useState("Web App");
   const [data, setData] = useState();
 
@@ -42,8 +45,8 @@ const Portfolio = () => {
       <Container>
         <Row>
           <Col lg="6" md="6" className="mb-5">
-            <SectionSubtitle subtitle=" My portfolio" />
-            <h4 className="mt-4">Some of my distinguished works</h4>
+            <SectionSubtitle subtitle={props.Lang.Lang == "En"  ? En.Myportfolio.smallTitle : Fr.Myportfolio.smallTitle} />
+            <h4 className="mt-4">{props.Lang.Lang == "En"  ? En.Myportfolio.Titre : Fr.Myportfolio.Titre} </h4>
           </Col>
 
           <Col lg="6" md="6">
@@ -86,4 +89,10 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+const GetState = (state) =>{
+  return {
+      Lang:state
+  }
+}
+
+export default connect(GetState)(Portfolio)

@@ -2,6 +2,14 @@ const portfolio = [
 
   //// web design
   {
+    id: "04",
+    title: "Cryptocurrency Website",
+    img: "/images/web_4.jpg",
+    category: "Web Design",
+    keyword: ["Html5", "Css3","Sass","Javascript"],
+    liveUrl: "#",
+  },
+  {
     id: "01",
     title: "Agency Website",
     img: "/images/web_1.jpg",
@@ -28,14 +36,7 @@ const portfolio = [
     liveUrl: "#",
   },
 
-  {
-    id: "04",
-    title: "Cryptocurrency Website",
-    img: "/images/web_4.jpg",
-    category: "Web Design",
-    keyword: ["Html5", "Css3","Sass","Javascript"],
-    liveUrl: "#",
-  },
+
 
   {
     id: "05",
@@ -49,7 +50,7 @@ const portfolio = [
   {
     id: "06",
     title: "Agency Website",
-    img: "/images/Web_6.jpg",
+    img: "/images/Web_3.jpg",
     category: "Web Design",
     keyword: ["Html5", "Css3","Sass","Javascript"],
     liveUrl: "#",
@@ -57,7 +58,7 @@ const portfolio = [
   ////// WEB APP
   {
     id: "07",
-    title: "Barber application",
+    title: "Barber booking application",
     img: "/images/App_7.png",
     category: "Web App",
     keyword: ["Vue js", "Vuex","Sass","JS","Css","Laravel","Mysql"],

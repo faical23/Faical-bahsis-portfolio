@@ -4,20 +4,20 @@ import Link from "next/link";
 import SectionSubtitle from "./SectionSubtitle";
 import classes from "../../styles/contact.module.css";
 import Form from "./Form";
+import En from '../../Lang/en.json'
+import Fr from '../../Lang/fr.json'
+import { connect } from "react-redux";
 
-const Contact = () => {
+
+const Contact = (props) => {
   return (
     <section id="contact" className={`${classes.contact}`}>
       <Container>
         <Row>
           <Col lg="6" md="6">
-            <SectionSubtitle subtitle="Contact me" />
-            <h3 className="mt-4 mb-4">Contact with me</h3>
-            <p>
-
-            If you have any project or any opportunity or want to hire me, my inbox is always open. Whether you have a question or just want to say hello, I'll do my best to answer you!
-
-            </p>
+            <SectionSubtitle subtitle={props.Lang.Lang == "En"  ? En.Contact.smallTitle : Fr.Contact.smallTitle} />
+            <h3 className="mt-4 mb-4">{props.Lang.Lang == "En"  ? En.Contact.Titre : Fr.Contact.Titre}</h3>
+            <p>{props.Lang.Lang == "En"  ? En.Contact.description : Fr.Contact.description}</p>
 
             <ul className={`${classes.contact__info__list}`}>
               <li className={`${classes.info__item}`}>
@@ -56,4 +56,10 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+const GetState = (state) =>{
+  return {
+      Lang:state
+  }
+}
+
+export default connect(GetState)(Contact)
