@@ -2,12 +2,11 @@
 export default function LangStore(state = "En", action) {
     switch (action.type) {
     case 'SET_LANG':
-        var Lang = action.payload
-        // console.log("state => " ,Lang)
-        return{state,Lang}
+        var Lang =action.payload
+        return {Lang};
     case 'CLEAR_LANG':
-        var LangPay = action.payload
-        return{state,LangPay}
+        var Lang =action.payload
+        return {Lang};
     default:
         return state
     }

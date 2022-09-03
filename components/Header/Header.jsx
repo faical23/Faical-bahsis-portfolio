@@ -19,8 +19,6 @@ import { connect } from "react-redux";
 const Header = (props) => {
   const [NavItemEn,SetNavItemEn] = useState('Home')
   const [NavItemFr,SetNavItemFr] = useState('Accueil')
-
-  const [Lang,SetLang] = useState(props.Lang.Lang)
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const headerFunc = () => {
@@ -36,23 +34,23 @@ const Header = (props) => {
   const NAV__LINK = [
     {
       path: "/",
-      display:  props.Lang.Lang == "En" ? En.header.home  : Fr.header.home,
+      display:  props.Lang.Lang == "Fr" ?  Fr.header.home : En.header.home  ,
     },
     {
       path: "#about",
-      display:  props.Lang.Lang == "En" ? En.header.about   : Fr.header.about,
+      display:  props.Lang.Lang == "Fr" ?  Fr.header.about : En.header.about   ,
     },
     {
       path: "#services",
-      display:  props.Lang.Lang == "En" ? En.header.services   : Fr.header.services,
+      display:  props.Lang.Lang == "Fr" ? Fr.header.services : En.header.services   ,
     },
     {
       path: "#portfolio",
-      display:  props.Lang.Lang == "En" ? En.header.portfolio   : Fr.header.portfolio,
+      display:  props.Lang.Lang == "Fr" ?  Fr.header.portfolio : En.header.portfolio   ,
     },
     {
       path: "#contact",
-      display:  props.Lang.Lang == "En" ? En.header.contact   : Fr.header.contact,
+      display:  props.Lang.Lang == "Fr" ?  Fr.header.contact : En.header.contact   ,
     },
   ];
 
@@ -63,6 +61,8 @@ const Header = (props) => {
   }, []);
 
   const toggleMenu = () =>menuRef.current.classList.toggle(`${classes.menu__active}`);
+
+  console.log("Lang => " ,  props.Lang)
 
   return (
     <header className={`${classes.header}`} ref={headerRef}>
@@ -100,10 +100,11 @@ const Header = (props) => {
                   </a>
                 </p>
                 <div onClick={()=>{
-                  props.Lang.Lang === "En" ? props.ChangeLang('Fr') : props.ChangeLang('En')
+                  props.Lang.Lang == "Fr" ? props.ChangeLang('En') :  props.ChangeLang('Fr') 
                 }} style={{position: "relative",top: "11px",cursor: "pointer"}}>
                     {
-                      Lang === "Fr" ?
+                      props.Lang.Lang == "Fr" ?
+                      
                       <Image alt="hero-image" src={Frensh} width="30" height="30" objectFit="cover" />
                       :
                       <Image alt="hero-image" src={England} width="30" height="30" objectFit="cover" />

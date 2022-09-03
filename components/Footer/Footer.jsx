@@ -17,23 +17,23 @@ const Footer = (props) => {
   const NAV__LINK = [
     {
       path: "/",
-      display:  props.Lang.Lang == "En" ? En.header.home  : Fr.header.home,
+      display:  props.Lang.Lang == "Fr" ?   Fr.header.home : En.header.home,
     },
     {
       path: "#about",
-      display:  props.Lang.Lang == "En" ? En.header.about   : Fr.header.about,
+      display:  props.Lang.Lang == "Fr" ?  Fr.header.about : En.header.about   ,
     },
     {
       path: "#services",
-      display:  props.Lang.Lang == "En" ? En.header.services   : Fr.header.services,
+      display:  props.Lang.Lang == "Fr" ?   Fr.header.services : En.header.services,
     },
     {
       path: "#portfolio",
-      display:  props.Lang.Lang == "En" ? En.header.portfolio   : Fr.header.portfolio,
+      display:  props.Lang.Lang == "Fr" ? Fr.header.portfolio : En.header.portfolio   ,
     },
     {
       path: "#contact",
-      display:  props.Lang.Lang == "En" ? En.header.contact   : Fr.header.contact,
+      display:  props.Lang.Lang == "Fr" ?  Fr.header.contact : En.header.contact   ,
     },
   ];
 
@@ -54,7 +54,7 @@ const Footer = (props) => {
 
           <Col lg="6" className={`${classes.footer__top}`}>
             <div className={`${classes.footer__creator}`}>
-              <h6>{props.Lang.Lang == "En"  ? En.Footer.createdBy : Fr.Footer.createdBy}{" "} Faical bahsis</h6>
+              <h6>{props.Lang.Lang == "Fr"  ?  Fr.Footer.createdBy : En.Footer.createdBy }{" "} Faical bahsis</h6>
             </div>
           </Col>
 
@@ -62,7 +62,7 @@ const Footer = (props) => {
           <Col lg="12">
             <div className={`${classes.footer__copyright}`}>
               <p>
-                {props.Lang.Lang == "En"  ? En.Footer.CopyRight : Fr.Footer.CopyRight}
+                {props.Lang.Lang == "Fr"  ? Fr.Footer.CopyRight : En.Footer.CopyRight }
               </p>
             </div>
           </Col>

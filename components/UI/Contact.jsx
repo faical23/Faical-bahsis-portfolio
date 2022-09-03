@@ -15,9 +15,9 @@ const Contact = (props) => {
       <Container>
         <Row>
           <Col lg="6" md="6">
-            <SectionSubtitle subtitle={props.Lang.Lang == "En"  ? En.Contact.smallTitle : Fr.Contact.smallTitle} />
-            <h3 className="mt-4 mb-4">{props.Lang.Lang == "En"  ? En.Contact.Titre : Fr.Contact.Titre}</h3>
-            <p>{props.Lang.Lang == "En"  ? En.Contact.description : Fr.Contact.description}</p>
+            <SectionSubtitle subtitle={props.Lang.Lang == "Fr"  ?  Fr.Contact.smallTitle : En.Contact.smallTitle } />
+            <h3 className="mt-4 mb-4">{props.Lang.Lang == "Fr"  ?  Fr.Contact.Titre : En.Contact.Titre }</h3>
+            <p>{props.Lang.Lang == "Fr"  ? Fr.Contact.description : En.Contact.description }</p>
 
             <ul className={`${classes.contact__info__list}`}>
               <li className={`${classes.info__item}`}>

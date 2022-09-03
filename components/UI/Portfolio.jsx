@@ -45,8 +45,8 @@ const Portfolio = (props) => {
       <Container>
         <Row>
           <Col lg="6" md="6" className="mb-5">
-            <SectionSubtitle subtitle={props.Lang.Lang == "En"  ? En.Myportfolio.smallTitle : Fr.Myportfolio.smallTitle} />
-            <h4 className="mt-4">{props.Lang.Lang == "En"  ? En.Myportfolio.Titre : Fr.Myportfolio.Titre} </h4>
+            <SectionSubtitle subtitle={props.Lang.Lang == "Fr"  ?  Fr.Myportfolio.smallTitle : En.Myportfolio.smallTitle } />
+            <h4 className="mt-4">{props.Lang.Lang == "Fr"  ?  Fr.Myportfolio.Titre : En.Myportfolio.Titre } </h4>
           </Col>
 
           <Col lg="6" md="6">

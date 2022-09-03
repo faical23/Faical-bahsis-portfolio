@@ -8,8 +8,8 @@
     },
     "Hero":{
         "smallTitle":"Hi, my name is",
-        "bigTitle":"I build things for the web.",
-        "description":"I'm a full stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible , and It's always been my pleasure to contribute my best efforts to make your ideas become real.",
+        "bigTitle":"I build things for the web",
+        "description":"I'm a full stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible , and It's always been my pleasure to contribute my best efforts to make your ideas become real",
         "hireMe":"Hire me",
         "downloadCv":"Download CV",
         "skills":"Skills",
@@ -21,7 +21,7 @@
         "betterExperience":"Better Experience",
         "problemSolving":"Problem Solving",
         "betterDesign":"Better Design",
-        "description":"I have a passion for building cool software solutions and that's why I am in the field of Enterprise Software development. I am a strong believer in the fact that everyone should enjoy the work they do! That is why I love software development because I can contribute to making people's work easier, faster and better and hopefully, put a smile on their faces"
+        "description":"I have a passion for building cool software solutions and that's why I am in the field of Enterprise Software development. I am a strong believer in the fact that everyone should enjoy the work they do! That is why I love software development because I can contribute to making people's work easier, faster and better and hopefully, put a smile on their faces."
     },
     "AboutMe":{
         "smallTitle":"About Me",

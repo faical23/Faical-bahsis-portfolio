@@ -16,11 +16,11 @@ const About = (props) => {
       <Container>
         <Row>
           <Col lg="7" className={`${classes.about__content}`}>
-            <SectionSubtitle subtitle={props.Lang.Lang == "En" ? En.AboutMe.smallTitle : Fr.AboutMe.smallTitle} />
-            <h3 className="mt-4">{props.Lang.Lang == "En" ? En.AboutMe.titre1 : Fr.AboutMe.titre1}</h3>
-            <h3 className="mb-4">{props.Lang.Lang == "En" ? En.AboutMe.titre2 : Fr.AboutMe.titre2}</h3>
-            <p>{props.Lang.Lang == "En" ? En.AboutMe.description1 : Fr.AboutMe.description1}</p>
-            <p>{props.Lang.Lang == "En" ? En.AboutMe.description2 : Fr.AboutMe.description2}</p>
+            <SectionSubtitle subtitle={props.Lang.Lang == "Fr" ? Fr.AboutMe.smallTitle :  En.AboutMe.smallTitle } />
+            <h3 className="mt-4">{props.Lang.Lang == "Fr" ? Fr.AboutMe.titre1 :  En.AboutMe.titre1 }</h3>
+            <h3 className="mb-4">{props.Lang.Lang == "Fr" ?  Fr.AboutMe.titre2 : En.AboutMe.titre2 }</h3>
+            <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description1 : En.AboutMe.description1 }</p>
+            <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description2 : En.AboutMe.description2 }</p>
             <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
               <div>
                 <h6 className=" d-flex align-items-start gap-2 mt-3 fw-normal">
@@ -136,11 +136,11 @@ const About = (props) => {
 
             <div className="mt-5">
               <button className="primary__btn">
-                <Link href="#portfolio">{props.Lang.Lang == "En" ? En.AboutMe.myPortfolio : Fr.AboutMe.myPortfolio}</Link>
+                <Link href="#portfolio">{props.Lang.Lang == "Fr" ?  Fr.AboutMe.myPortfolio : En.AboutMe.myPortfolio }</Link>
               </button>
 
               <button className="secondary__btn">
-                  <a href="Files/FAICAL_BAHSIS_FR.pdf" target="_blank">{props.Lang.Lang == "En" ? En.AboutMe.downloadCv : Fr.AboutMe.downloadCv}</a>
+                <a  href={ props.Lang.Lang == "Fr" ? "Files/FAICAL_BAHSIS_FR.pdf" :  "Files/FAICAL_BAHSIS_EN.pdf"  } rel="noreferrer" target="_blank">{ props.Lang.Lang == "Fr" ?  Fr.Hero.downloadCv :  En.Hero.downloadCv  }</a>
               </button>
             </div>
           </Col>

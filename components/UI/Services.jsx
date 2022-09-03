@@ -30,11 +30,11 @@ const Services = (props) => {
           </Col>
 
           <Col lg="6" md="6" className={`${classes.service__title}`}>
-            <SectionSubtitle subtitle={props.Lang.Lang == "En" ?En.WhaIdo.smallTitle : Fr.WhaIdo.smallTitle} />
-            <h3 className="mb-1">{props.Lang.Lang == "En" ? En.WhaIdo.betterExperience : Fr.WhaIdo.betterExperience}.</h3>
-            <h3 className="mb-1">{props.Lang.Lang == "En" ? En.WhaIdo.problemSolving : Fr.WhaIdo.problemSolving}.</h3>
-            <h3 className="mb-1">{props.Lang.Lang == "En" ? En.WhaIdo.betterDesign : Fr.WhaIdo.betterDesign}.</h3>
-            <p className="my-4">{props.Lang.Lang == "En" ? En.WhaIdo.description : Fr.WhaIdo.description}</p>
+            <SectionSubtitle subtitle={props.Lang.Lang == "Fr" ? Fr.WhaIdo.smallTitle : En.WhaIdo.smallTitle } />
+            <h3 className="mb-1">{props.Lang.Lang == "Fr" ?  Fr.WhaIdo.betterExperience : En.WhaIdo.betterExperience }.</h3>
+            <h3 className="mb-1">{props.Lang.Lang == "Fr" ? Fr.WhaIdo.problemSolving : En.WhaIdo.problemSolving }.</h3>
+            <h3 className="mb-1">{props.Lang.Lang == "Fr" ?  Fr.WhaIdo.betterDesign : En.WhaIdo.betterDesign }.</h3>
+            <p className="my-4">{props.Lang.Lang == "Fr" ?  Fr.WhaIdo.description : En.WhaIdo.description }</p>
           </Col>
         </Row>
       </Container>
