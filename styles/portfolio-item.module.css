@@ -5,6 +5,15 @@
   border-radius: 10px;
   margin-bottom: 30px;
 }
+.portfolio_Tags{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(90px,1fr));
+    justify-content: space-between;
+}
+.portfolio__img_Img{
+  width:380px;
+  height:250px;
+}
 
 .portfolio__item h6 {
   color: #01d293;
@@ -27,8 +36,10 @@
   color: #fff;
   background: #808dad68;
   font-size: 0.7rem;
-  margin-right: 10px;
   border-radius: 5px;
+  margin:5px;
+  text-align:center;
+  
 }
 
 .portfolio__live {

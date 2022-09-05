@@ -18,14 +18,14 @@ export default function Home() {
     message_html: 'Someone open your portfolio'
   };
 
-  useEffect(() =>{
-    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_EMAIL, process.env.NEXT_PUBLIC_TEMPLATE_1_EMAIL,templateParams,process.env.NEXT_PUBLIC_PUBLIC_KEY_EMAIL)
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
-  },[])
+  // useEffect(() =>{
+  //   emailjs.send(process.env.NEXT_PUBLIC_SERVICE_EMAIL, process.env.NEXT_PUBLIC_TEMPLATE_1_EMAIL,templateParams,process.env.NEXT_PUBLIC_PUBLIC_KEY_EMAIL)
+  //   .then((result) => {
+  //       console.log(result.text);
+  //   }, (error) => {
+  //       console.log(error.text);
+  //   });
+  // },[])
 
 
 

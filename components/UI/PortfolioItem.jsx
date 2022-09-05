@@ -9,15 +9,18 @@ const PortfolioItem = (props) => {
     <div className={`${classes.portfolio__item}`}>
       <div className="bg-transparent">
         <h6>{title}</h6>
-        {keyword.map((item, index) => (
-          <span className={`${classes.portfolio__keyword}`} key={index}>
-            {item}
-          </span>
-        ))}
+        <div className={`${classes.portfolio_Tags}`}>
+          {keyword.map((item, index) => (
+            <span className={`${classes.portfolio__keyword}`} key={index}>
+              {item}
+            </span>
+          ))}
+        </div>
+
       </div>
 
       <div className={`${classes.portfolio__img}`}>
-        <Image alt="portfolio-img" src={img} width="380" height="250" />
+        <img className={`${classes.portfolio__img_Img}`}  src={img} alt="portfolio-img"  />
       </div>
 
       {/* <div className={`${classes.portfolio__live} bg-transparent`}>
