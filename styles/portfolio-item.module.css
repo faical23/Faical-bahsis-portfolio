@@ -4,6 +4,7 @@
   padding-top: 30px;
   border-radius: 10px;
   margin-bottom: 30px;
+  width:98%;
 }
 .portfolio_Tags{
     display: grid;
@@ -11,8 +12,9 @@
     justify-content: space-between;
 }
 .portfolio__img_Img{
-  width:380px;
-  height:250px;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
 }
 
 .portfolio__item h6 {
@@ -23,7 +25,8 @@
 
 .portfolio__img {
   margin-top: 30px;
-
+  width:100%;
+  overflow:hidden;
   background: transparent;
 }
 

@@ -29,7 +29,10 @@
   }
 }
 .technologeUsed{
-  display: flex !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit ,minmax(160px,1fr));
+  justify-content: space-between;
+  align-items: baseline;
 }
 .ImgAbtMe{
   height: 300px !important;
@@ -43,7 +46,6 @@
     width: 150px !important;
   }
   .technologeUsed{
-    display: block !important;
     margin:10px 40px
   }
 }

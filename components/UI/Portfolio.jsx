@@ -48,17 +48,8 @@ const Portfolio = (props) => {
             <SectionSubtitle subtitle={props.Lang.Lang == "Fr"  ?  Fr.Myportfolio.smallTitle : En.Myportfolio.smallTitle } />
             <h4 className="mt-4">{props.Lang.Lang == "Fr"  ?  Fr.Myportfolio.Titre : En.Myportfolio.Titre } </h4>
           </Col>
-
           <Col lg="6" md="6">
             <div className={`${classes.tab__btns} text-end`}>
-              {/* <button
-                className={` ${
-                  filter === "Mobile App" ? active : ""
-                } secondary__btn text-white`}
-                onClick={() => setFilter("Mobile App")}
-              >
-                Mobile App
-              </button> */}
               <button
                 className={` ${
                   filter === "Web App" ? active : ""
@@ -77,12 +68,13 @@ const Portfolio = (props) => {
               </button>
             </div>
           </Col>
-
-          {data?.map((item) => (
-            <Col lg="4" md="4" sm="6" key={item.id}>
-              <PortfolioItem item={item} />
-            </Col>
-          ))}
+          <Col lg="12" md="12">
+            <div className={classes.Portfolio__Grid}>
+                {data?.map((item) => (
+                    <PortfolioItem item={item} key={item.id}/>
+                ))}
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>

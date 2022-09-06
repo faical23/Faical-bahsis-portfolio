@@ -22,14 +22,12 @@ const About = (props) => {
             <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description1 : En.AboutMe.description1 }</p>
             <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description2 : En.AboutMe.description2 }</p>
             <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
-              <div>
                 <h6 className=" d-flex align-items-start gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   JavaScript (ES6+)
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -40,18 +38,14 @@ const About = (props) => {
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  Redux
+                  React js
                 </h6>
-              </div>
-
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  React js
+                  Redux
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -64,16 +58,12 @@ const About = (props) => {
                   </span>
                   Vuex
                 </h6>
-              </div>
-
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   Node js
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -86,9 +76,6 @@ const About = (props) => {
                   </span>
                   Laravel
                 </h6>
-              </div>
-
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -101,16 +88,12 @@ const About = (props) => {
                   </span>
                   MongoDb
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   MySql
                 </h6>
-
-              </div>
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -129,20 +112,15 @@ const About = (props) => {
                   </span>
                   Rest Api
                 </h6>
-
-              </div>
-
             </div>
             <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description3 : En.AboutMe.description3 }</p>
             <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
-              <div>
                 <h6 className=" d-flex align-items-start gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   Git
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -155,15 +133,12 @@ const About = (props) => {
                   </span>
                   Gitlab
                 </h6>
-              </div>
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   Uml
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -176,15 +151,12 @@ const About = (props) => {
                   </span>
                   Vscode
                 </h6>
-              </div>
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   Trello
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -197,15 +169,12 @@ const About = (props) => {
                   </span>
                   UX/UI design
                 </h6>
-              </div>
-              <div>
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
                   Postman
                 </h6>
-
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -218,7 +187,6 @@ const About = (props) => {
                   </span>
                   Npm
                 </h6>
-              </div>
             </div>
 
             <div className="mt-5">

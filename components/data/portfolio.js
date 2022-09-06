@@ -59,7 +59,7 @@ const portfolio = [
   {
     id: "07",
     title: "Barber booking application",
-    img: "/images/App_7.png",
+    img: "/images/App_7.jpg",
     category: "Web App",
     keyword: ["Vue js", "Vuex","Sass","JS","Css","Laravel","Mysql"],
     liveUrl: "#",
