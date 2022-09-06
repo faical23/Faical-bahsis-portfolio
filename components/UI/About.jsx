@@ -21,7 +21,7 @@ const About = (props) => {
             <h3 className="mb-4">{props.Lang.Lang == "Fr" ?  Fr.AboutMe.titre2 : En.AboutMe.titre2 }</h3>
             <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description1 : En.AboutMe.description1 }</p>
             <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description2 : En.AboutMe.description2 }</p>
-            <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
+            <div className={`align-items-start technologeUsed ${classes.technologeUsed}`}>
                 <h6 className=" d-flex align-items-start gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
@@ -114,7 +114,7 @@ const About = (props) => {
                 </h6>
             </div>
             <p>{props.Lang.Lang == "Fr" ?  Fr.AboutMe.description3 : En.AboutMe.description3 }</p>
-            <div className={`align-items-start gap-5  technologeUsed ${classes.technologeUsed}`}>
+            <div className={`align-items-start technologeUsed ${classes.technologeUsed}`}>
                 <h6 className=" d-flex align-items-start gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>

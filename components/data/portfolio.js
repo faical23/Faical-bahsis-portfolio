@@ -50,7 +50,7 @@ const portfolio = [
   {
     id: "06",
     title: "Agency Website",
-    img: "/images/Web_3.jpg",
+    img: "/images/web_3.jpg",
     category: "Web Design",
     keyword: ["Html5", "Css3","Sass","Javascript"],
     liveUrl: "#",
